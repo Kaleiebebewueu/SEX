@@ -11,7 +11,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from config import OWNER_ID
-from StringGen import Anony
+from Esclipse import app
 
 
 async def aexec(code, client, message):
@@ -28,13 +28,13 @@ async def edit_or_reply(msg: Message, **kwargs):
     await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 
-@Anony.on_edited_message(
+@app.on_edited_message(
     filters.command("eval")
     & filters.user(OWNER_ID)
     & ~filters.forwarded
     & ~filters.via_bot
 )
-@Anony.on_message(
+@app.on_message(
     filters.command("eval")
     & filters.user(OWNER_ID)
     & ~filters.forwarded
@@ -113,13 +113,13 @@ async def executor(client: Anony, message: Message):
         await edit_or_reply(message, text=final_output, reply_markup=keyboard)
 
 
-@Anony.on_callback_query(filters.regex(r"runtime"))
+@app.on_callback_query(filters.regex(r"runtime"))
 async def runtime_func_cq(_, cq):
     runtime = cq.data.split(None, 1)[1]
     await cq.answer(runtime, show_alert=True)
 
 
-@Anony.on_callback_query(filters.regex("forceclose"))
+@app.on_callback_query(filters.regex("forceclose"))
 async def forceclose_command(_, CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
@@ -138,13 +138,13 @@ async def forceclose_command(_, CallbackQuery):
         return
 
 
-@Anony.on_edited_message(
+@app.on_edited_message(
     filters.command("sh")
     & filters.user(OWNER_ID)
     & ~filters.forwarded
     & ~filters.via_bot
 )
-@Anony.on_message(
+@app.on_message(
     filters.command("sh")
     & filters.user(OWNER_ID)
     & ~filters.forwarded
