@@ -1,4 +1,4 @@
-from StringGen import db
+from Esclipse import db
 
 usersdb = db.users
 
