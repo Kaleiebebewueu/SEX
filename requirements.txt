@@ -1,5 +1,5 @@
 motor==3.2.0
-pymongo>=3.11,<4.0
+pymongo
 pyromod==2.0.0
 oldpyro==0.1.0
 pyrogram==2.0.106
