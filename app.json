@@ -1,12 +1,12 @@
 {
-    "name": "String Gen Bot",
+    "name": "Esclipse",
     "description": "A Telegram Bot to generate Telethon and Pyrogram String Session.",
     "logo": "https://telegra.ph/file/654ddaf472f18b799600b.jpg",
     "keywords": [
         "python3",
         "telegram",
         "session",
-        "stringbot",
+        "Esclipse",
         "telegram-bot",
         "pyrogram",
         "telethon"
