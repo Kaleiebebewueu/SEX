@@ -1,4 +1,4 @@
-motor==3.2.0
+motor==3.1.0
 pymongo==4.0.0
 pyromod==2.0.0
 oldpyro==0.1.0
