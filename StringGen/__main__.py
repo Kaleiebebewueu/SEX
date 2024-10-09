@@ -3,8 +3,8 @@ import importlib
 
 from pyrogram import idle
 
-from StringGen import LOGGER, Anony
-from StringGen.modules import ALL_MODULES
+from Esclipse import LOGGER, app
+from Esclipse.modules import ALL_MODULES
 
 
 async def anony_boot():
