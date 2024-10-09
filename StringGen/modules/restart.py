@@ -2,9 +2,9 @@ import os
 import shutil
 from pyrogram import filters
 from config import OWNER_ID
-from your_module import app
+from StringGen import Anony
 
-@app.on_message(filters.command(["restart"]) & filters.user(OWNER_ID))
+@Anony.on_message(filters.command(["restart"]) & filters.user(OWNER_ID))
 async def restart_(_, message):
     response = await message.reply_text("ʀᴇsᴛᴀʀᴛɪɴɢ...")
 
